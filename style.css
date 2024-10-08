@@ -1,0 +1,94 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  height: 100vh;
+  background-image: url('https://ik.imagekit.io/ably/ghost/prod/2023/12/how-to-build-a-chat-room-website-with-react-typing-indicator.png?tr=w-1728,q-50https://ik.imagekit.io/ably/ghost/prod/2023/12/how-to-build-a-chat-room-website-with-react-typing-indicator.png?tr=w-1728,q-50'); /* Background image URL */
+  background-size: cover ; /* Make sure the image covers the entire background */
+  background-position: center;
+  background-repeat: no-repeat;
+ /* background: linear-gradient(to right, #0c0836, #540506);*/
+}
+
+h1 {
+  margin-bottom: 20px;
+  margin-right: 500px;
+  color: #0b983a;
+  text-shadow: 2px 2px 4px rgb(0, 0, 0);
+}
+
+#gameBoard {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 5px;
+  background-color: #fff; /* Default background for the grid */
+  border: 5px solid #333;
+  border-radius: 10px;
+  padding: 5px;
+  margin-right: 500px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  background-color: #421f07; /* Brown background for cells */
+  border: 2px solid #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+
+
+.cell.x {
+  color: red; /* Cross color */
+  font-weight: bold;
+  font-size: 3rem;
+  text-shadow: 0 0 10px rgba(255, 0, 0, 0.8), 0 0 15px rgba(255, 0, 0, 0.6), 0 0 20px rgba(255, 0, 0, 0.4); /* Sparkling effect */
+}
+
+.cell.o {
+  color: blue; /* Circle color set to blue */
+  font-weight: bold;
+  font-size: 3rem;
+  text-shadow: 
+    0 0 10px rgba(0, 0, 255, 0.8), 
+    0 0 15px rgba(0, 0, 255, 0.6), 
+    0 0 20px rgba(0, 0, 255, 0.4); /* Sparkling effect retained for 'O' */
+}
+
+#status {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  color: #0b983a;
+  margin-right: 500px;
+}
+
+#restartButton {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #0b983a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  margin-right: 500px;
+}
+
+#restartButton:hover {
+  background-color: #555;
+}
